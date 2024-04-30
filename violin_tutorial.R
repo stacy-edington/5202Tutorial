@@ -54,7 +54,7 @@ devtools::install_github("BlakeRMills/MoMAColors") ##this line of code downloads
 library(MoMAColors) #this is loading the color palette once it is downloaded
 library(ggplot2)
 pal <- moma.colors("Warhol") #this sets up what color palette we would like to use for the plots
-combined_data_KHS$Population <- factor(combined_data_Euro$Population, levels = c("Pop1", "Pop2", "Pop3", "Pop4", "Pop5", "Pop6", "Pop7"))
+combined_data_Euro$Population <- factor(combined_data_Euro$Population, levels = c("Pop1", "Pop2", "Pop3", "Pop4", "Pop5", "Pop6", "Pop7"))
 p1 = ggplot(combined_data_Euro, aes(x=Population, y=Euro, fill=Population)) + 
   geom_boxplot(width=0.1, fill="white")+ 
   labs(title="Variation in European Ancestry Proportions",x="Pop", y = "Proportion European Ancestry")+
