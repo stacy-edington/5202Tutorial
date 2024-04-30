@@ -5,11 +5,11 @@ library(dplyr)
 ##Download the data from github
 
 #this file contains the ancestry proportions for Pop1 individuals and reference data
-Pop1_Admix <- read.table("path/to/file/Pop1_Admix.txt", 
+Pop1_Admix <- read.table("https://raw.githubusercontent.com/stacy-edington/5202Tutorial/main/Pop1_Admix.txt", 
                    header = FALSE)  
 
 ##this file contains the population IDs for Pop1 individuals and reference data 
-Pop1_IDS = read.table("path/to/file/Pop1_IDs.txt", col.names = FALSE)
+Pop1_IDS = read.table("https://raw.githubusercontent.com/stacy-edington/5202Tutorial/main/Pop1_IDs.txt", col.names = FALSE)
 
 ##combine the ancestry proportions file with the population IDs file using cbind 
 Pop1 = cbind(Pop1_IDS, Pop1_Admix) #make sure that your ID file is listed first so that it will be the first column in your new datatable
@@ -19,10 +19,10 @@ colnames(Pop1)[3] <- "KHS" ##this will change the second column name in the Pop1
 colnames(Pop1)[4] <- "Euro" ##this will change the third column name in the Pop1 data to "KHS" in your datatable. 
 
 ##this file contains the population IDs for Pops2-7 individuals and reference data 
-Pop2_7_IDs = read.table("path/to/file/Pop2_7_IDs.txt", col.names = FALSE)  
+Pop2_7_IDs = read.table("https://raw.githubusercontent.com/stacy-edington/5202Tutorial/main/Pop2_7_IDs.txt", col.names = FALSE)  
 
 #this file contains the ancestry proportions for Pops2-7 individuals and reference data
-Pop2_7_Admix <- read.table("path/to/file/Pop2_7_Admix.txt", 
+Pop2_7_Admix <- read.table("https://raw.githubusercontent.com/stacy-edington/5202Tutorial/main/Pop2_7_Admix.txt", 
                         header = FALSE)  
 
 ##combine the Pops2-7 ID and Admix files using cbind 
